@@ -15,13 +15,24 @@
 
 function palindrome(str) {
     // Напишите код здесь
+    const strLowerCase = str.toLowerCase();
+    let strReversed = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        strReversed += strLowerCase[i]; // сложение символов строки по-новой справа налево
+    }
+    if (strLowerCase === strReversed) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(palindrome('топот')); // должно быть true
-console.log(palindrome('Saippuakivikauppias')); // true
-console.log(palindrome('привет')); // false
+// console.log(palindrome('топот')); // должно быть true
+// console.log(palindrome('Saippuakivikauppias')); // true
+// console.log(palindrome('привет')); // false
 
 /*
  * Бонус. Задача для любознательных. Пусть функция принимает на вход любую строку,

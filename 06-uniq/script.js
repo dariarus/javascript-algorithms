@@ -9,6 +9,10 @@
 
 function uniq(arr) {
     // Напишите код здесь
+    const filteredArr = arr.filter((item, position, array) => {
+        return array.lastIndexOf(item) === position;
+      });
+    return filteredArr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

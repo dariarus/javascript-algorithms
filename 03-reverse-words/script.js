@@ -10,6 +10,17 @@
 
 function reverseWords(str) {
     // Напишите код здесь
+    let words = str.split(' ');
+    let resultStr = '';
+    for (let wordIndex = words.length - 1; wordIndex >= 0; wordIndex--) {
+        if (wordIndex !== words.length - 1) { // все итерации, когда строка уже не пустая
+            resultStr = resultStr + ' ' + words[wordIndex];
+        }
+        else {
+            resultStr = words[wordIndex]; // первая итерация, когда строка пустая
+        }
+    }
+    return resultStr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

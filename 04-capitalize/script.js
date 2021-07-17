@@ -8,7 +8,7 @@
 
 function capitalize(str) {
     // Напишите код здесь
-    let words = str.split(' ');
+    const words = str.split(' ');
     let resultStr = '';
     words.forEach(function (item) {
         const wordLowerCase = item.slice(0, 1).toUpperCase() + item.slice(1);

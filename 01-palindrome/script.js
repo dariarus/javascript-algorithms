@@ -16,6 +16,17 @@
 function palindrome(str) {
     // Напишите код здесь
     const strLowerCase = str.toLowerCase();
+    // split - разделить слово/строку на массив символов, reverse - вернуть символы в обратном порядке, 
+    // join('') - соединить все символы обратно в слово/строку, используя разделитель '' вместо стандартной запятой
+    const strReversed = strLowerCase.split('').reverse().join(''); 
+    return strLowerCase === strReversed; // сравнение вне if в любом случае возвращает true или false
+}
+
+
+/* альтернативное решение с for и if
+
+function palindrome(str) {
+    const strLowerCase = str.toLowerCase();
     let strReversed = '';
     for (let i = str.length - 1; i >= 0; i--) {
         strReversed += strLowerCase[i]; // сложение символов строки по-новой справа налево
@@ -26,7 +37,7 @@ function palindrome(str) {
     else {
         return false;
     }
-}
+*/
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
@@ -37,7 +48,7 @@ function palindrome(str) {
 /*
  * Бонус. Задача для любознательных. Пусть функция принимает на вход любую строку,
  * но пробелы и знаки препинания не учитывает. Например:
- * 
+ *
  * palindrome('О, лета тело!'); // true
- * 
+ *
 */

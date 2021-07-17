@@ -10,9 +10,6 @@
 function factorial(n) {
     // Напишите код здесь
     let res = 1;
-    if (n === 0) {
-        res = 1;
-    }
     for (let number = 1; number <= n; number++) {
         res *= number;
     }

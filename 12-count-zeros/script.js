@@ -13,7 +13,7 @@ function countZerosInNumber(n) {
 
     // извлекаем каждую цифру, из которых состоит входящее число
     do {
-        let digit = reminder % 10;
+        const digit = reminder % 10;
         if (digit === 0) {
             resultZeros++;
         }

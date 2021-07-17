@@ -20,7 +20,7 @@ function intersection(arr1, arr2) {
     // создание массива с уникальными элементами
     const uniqArr1 = uniq(arr1);
 
-    let arrFiltered = uniqArr1.filter(item1 => {
+    const arrFiltered = uniqArr1.filter(item1 => {
         return arr2.includes(item1);
     });
     return arrFiltered;

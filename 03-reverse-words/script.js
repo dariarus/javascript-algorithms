@@ -10,7 +10,7 @@
 
 function reverseWords(str) {
     // Напишите код здесь
-    let words = str.split(' ');
+    const words = str.split(' ');
     let resultStr = '';
     for (let wordIndex = words.length - 1; wordIndex >= 0; wordIndex--) {
         if (wordIndex !== words.length - 1) { // все итерации, когда строка уже не пустая

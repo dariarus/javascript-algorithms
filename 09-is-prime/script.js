@@ -14,10 +14,7 @@ function isPrime(n) {
     if (n <= 1) {
         return false;
     }
-    if (n === 2) {
-        return true;
-    }
-    for (let divider = 2; divider < n; divider++) {
+    for (let divider = 2, numSqrt = Math.sqrt(n); divider < numSqrt; divider++) { // проходить можно не до конца, а до квадратного корня из входящего числа
         if (n % divider === 0) {
             return false;
         }
